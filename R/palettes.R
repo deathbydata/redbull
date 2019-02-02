@@ -1,6 +1,4 @@
 #' Palette definitions for redbull package
-#'
-#' @export
 redbull_palettes <- list(
   `redbull` = redbull_cols(),
   `rbprimary` = redbull_cols("red", "blue", "yellow", "grey"),

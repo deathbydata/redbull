@@ -10,15 +10,15 @@
 scale_color_redbull <- function(palette = "redbull", discrete = TRUE, reverse = FALSE, ...) {
 
   if (discrete) {
-    discrete_scale(aesthetics = "colour", scale_name = paste0("redbull_", palette), palette = redbull_palette_discrete(palette, reverse))
+    ggplot2::discrete_scale(aesthetics = "colour", scale_name = paste0("redbull_", palette), palette = redbull_palette_discrete(palette, reverse))
   }
 
   else {
     pal <- redbull_palette_interpolate(palette = palette, reverse = reverse)
-    scale_color_gradientn(colours = pal(256), ...)
+    ggplot2::scale_color_gradientn(colours = pal(256), ...)
   }
 }
 
-#' @rdname scale_colour_redbull
+#' @rdname scale_color_redbull
 #' @export
 scale_colour_redbull <- scale_color_redbull

@@ -2,9 +2,13 @@
 % Please edit documentation in R/scales.R
 \name{scale_color_redbull}
 \alias{scale_color_redbull}
+\alias{scale_colour_redbull}
 \title{Color scale constructor for drsimonj colors}
 \usage{
 scale_color_redbull(palette = "redbull", discrete = TRUE,
+  reverse = FALSE, ...)
+
+scale_colour_redbull(palette = "redbull", discrete = TRUE,
   reverse = FALSE, ...)
 }
 \arguments{
