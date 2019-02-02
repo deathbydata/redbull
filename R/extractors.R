@@ -28,15 +28,41 @@ bloomberg_cols <- function(...) {
 
 #' Return function to interpolate a Red Bull color palette
 #'
-#' @param palette Character name of palette in drsimonj_palettes
+#' @param palette Character name of palette in redbull_palettes
 #' @param reverse Boolean indicating whether the palette should be reversed
 #' @param ... Additional arguments to pass to colorRampPalette()
 #'
 #' @export
-redbull_pals <- function(palette = "redbull", reverse = FALSE, ...) {
+redbull_palette_interpolate <- function(palette = "redbull", reverse = FALSE, ...) {
   pal <- redbull_palettes[[palette]]
 
   if (reverse) pal <- rev(pal)
 
   colorRampPalette(pal, ...)
+}
+
+#' Return function to a Red Bull color palette
+#'
+#' @param palette Character name of palette in redbull_palettes
+#' @param reverse Boolean indicating whether the palette should be reversed
+#' @param ... Additional arguments to pass to colorRampPalette()
+#'
+#' @export
+redbull_palette_discrete <- function(palette = "redbull", reverse = FALSE, ...) {
+  pal <- redbull_palettes[[palette]]
+
+  if (reverse) pal <- rev(pal)
+
+  function(n) {
+
+    palette_size <- length(pal)
+
+    if(n > palette_size) {
+      unname(c(pal[seq_len(palette_size)], rep(pal[palette_size], n - palette_size)))
+    }
+    else {
+      unname(pal[seq_len(n)])
+    }
+
+  }
 }

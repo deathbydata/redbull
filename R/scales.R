@@ -10,17 +10,11 @@
 scale_color_redbull <- function(palette = "redbull", discrete = TRUE, reverse = FALSE, ...) {
 
   if (discrete) {
-    pal <- redbull_palettes[[palette]]
-      function(n) {
-        if(n > length(pal)) {
-          c(pal[seq_len(n)], rep(pal[length(pal)], n - length(pal)))
-        }
-        pal[seq_len(n)]
-      }
+    discrete_scale(aesthetics = "colour", scale_name = paste0("redbull_", palette), palette = redbull_palette_discrete(palette, reverse))
   }
 
   else {
-    pal <- redbull_pals(palette = palette, reverse = reverse)
+    pal <- redbull_palette_interpolate(palette = palette, reverse = reverse)
     scale_color_gradientn(colours = pal(256), ...)
   }
 }

@@ -1,8 +1,6 @@
 #' Red Bull Colour Palette
 #'
 #' Colour palette to support easy themed plotting for Red Bull projects in R.
-#'
-#' @export
 redbull_colours <- c(
   `blue` = "#153B8B",
   `light blue` = "#487AE3",
@@ -16,8 +14,6 @@ redbull_colours <- c(
 #' Bloomberg Colour Palette
 #'
 #' Colour palette based on the Bloomberg colour template \link[https://www.bloomberg.com/graphics/2018-what-the-midterm-campaign-looks-like-in-your-hometown/]
-#'
-#' @export
 bloomberg_colors <- c(
   `blue` = "#00B9E7",
   `pink` = "#FE9EA4",
