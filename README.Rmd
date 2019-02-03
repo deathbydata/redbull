@@ -42,10 +42,16 @@ library(magrittr)
 theme_set(theme_bw())
 
 # Using colour aesthetic (points/lines)
-mtcars %>% ggplot(aes(x = wt, y = mpg, colour = as.factor(cyl))) + geom_point(size = 4, alpha = 0.75) + scale_colour_redbull()
+mtcars %>% 
+  ggplot(aes(x = wt, y = mpg, colour = as.factor(cyl))) + 
+  geom_point(size = 4, alpha = 0.75) + 
+  scale_colour_redbull()
 
 # Using fill aesthetic (bars/areas)
-mtcars %>% ggplot(aes(x = as.factor(carb), fill = as.factor(carb))) + geom_bar() + scale_fill_redbull("rbfull")
+mtcars %>% 
+  ggplot(aes(x = as.factor(carb), fill = as.factor(carb))) + 
+  geom_bar() + 
+  scale_fill_redbull("rbfull")
 ```
 
 You can use `discrete = FALSE` if you have continuous values. `reverse = TRUE` will flip the direction of the colours in the palette.
@@ -60,7 +66,13 @@ mtcars %>% ggplot(aes(x = disp, y = wt, colour = hp)) +
 For discrete scales you can select the behaviour when there are more levels of your factor than palette colours using the `rep` parameter.
 
 ```{r}
-mtcars %>% ggplot(aes(x = as.factor(carb), fill = as.factor(carb))) + geom_bar() + scale_fill_redbull("rbyellowgrey", rep = TRUE)
+mtcars %>% 
+  ggplot(aes(x = as.factor(carb), fill = as.factor(carb))) + 
+  geom_bar() + 
+  scale_fill_redbull("rbyellowgrey", rep = TRUE)
 
-mtcars %>% ggplot(aes(x = as.factor(carb), fill = as.factor(carb))) + geom_bar() + scale_fill_redbull("rbyellowgrey", rep = FALSE)
+mtcars %>% 
+  ggplot(aes(x = as.factor(carb), fill = as.factor(carb))) + 
+  geom_bar() + 
+  scale_fill_redbull("rbyellowgrey", rep = FALSE)
 ```
