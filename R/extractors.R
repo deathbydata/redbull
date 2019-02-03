@@ -48,7 +48,7 @@ redbull_palette_interpolate <- function(palette = "redbull", reverse = FALSE, ..
 #' @param ... Additional arguments to pass to colorRampPalette()
 #'
 #' @export
-redbull_palette_discrete <- function(palette = "redbull", reverse = FALSE, ...) {
+redbull_palette_discrete <- function(palette = "redbull", reverse = FALSE, rep = TRUE, ...) {
   pal <- redbull_palettes[[palette]]
 
   if (reverse) pal <- rev(pal)
@@ -58,7 +58,12 @@ redbull_palette_discrete <- function(palette = "redbull", reverse = FALSE, ...) 
     palette_size <- length(pal)
 
     if(n > palette_size) {
-      unname(c(pal[seq_len(palette_size)], rep(pal[palette_size], n - palette_size)))
+      if(rep) {
+        unname(rep(pal, n))
+      }
+      else {
+        unname(c(pal[seq_len(palette_size)], rep(pal[palette_size], n - palette_size)))
+      }
     }
     else {
       unname(pal[seq_len(n)])

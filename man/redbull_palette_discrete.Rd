@@ -4,7 +4,8 @@
 \alias{redbull_palette_discrete}
 \title{Return function to a Red Bull color palette}
 \usage{
-redbull_palette_discrete(palette = "redbull", reverse = FALSE, ...)
+redbull_palette_discrete(palette = "redbull", reverse = FALSE,
+  rep = TRUE, ...)
 }
 \arguments{
 \item{palette}{Character name of palette in redbull_palettes}
