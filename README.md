@@ -46,7 +46,7 @@ mtcars %>%
   scale_colour_redbull()
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-1-1.png)
+![](README_files/figure-markdown_github/scale_redbull-1.png)
 
 ``` r
 # Using fill aesthetic (bars/areas)
@@ -56,7 +56,7 @@ mtcars %>%
   scale_fill_redbull("rbfull")
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-1-2.png)
+![](README_files/figure-markdown_github/scale_redbull-2.png)
 
 You can use `discrete = FALSE` if you have continuous values. `reverse = TRUE` will flip the direction of the colours in the palette.
 
@@ -67,7 +67,7 @@ mtcars %>% ggplot(aes(x = disp, y = wt, colour = hp)) +
   scale_color_redbull("rbwarm", discrete = FALSE, reverse = TRUE)
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](README_files/figure-markdown_github/discrete%20and%20reverse-1.png)
 
 For discrete scales you can select the behaviour when there are more levels of your factor than palette colours using the `rep` parameter.
 
@@ -78,7 +78,7 @@ mtcars %>%
   scale_fill_redbull("rbyellowgrey", rep = TRUE)
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](README_files/figure-markdown_github/rep%20parameter-1.png)
 
 ``` r
 mtcars %>% 
@@ -87,4 +87,4 @@ mtcars %>%
   scale_fill_redbull("rbyellowgrey", rep = FALSE)
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-3-2.png)
+![](README_files/figure-markdown_github/rep%20parameter-2.png)

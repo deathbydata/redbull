@@ -34,7 +34,7 @@ There are several colours and palettes built in to the package. Additions and mo
 
 Usage is through the functions `scale_fill_redbull` and `scale_colour_redbull` depending on your plot aesthetic.
 
-```{r}
+```{r scale_redbull}
 library(ggplot2)
 library(redbull)
 library(magrittr)
@@ -56,7 +56,7 @@ mtcars %>%
 
 You can use `discrete = FALSE` if you have continuous values. `reverse = TRUE` will flip the direction of the colours in the palette.
 
-```{r}
+```{r discrete and reverse}
 mtcars %>% ggplot(aes(x = disp, y = wt, colour = hp)) + 
   geom_point(size = 4.5, colour = "black") +
   geom_point(size = 4) + 
@@ -65,7 +65,7 @@ mtcars %>% ggplot(aes(x = disp, y = wt, colour = hp)) +
 
 For discrete scales you can select the behaviour when there are more levels of your factor than palette colours using the `rep` parameter.
 
-```{r}
+```{r rep parameter}
 mtcars %>% 
   ggplot(aes(x = as.factor(carb), fill = as.factor(carb))) + 
   geom_bar() + 
