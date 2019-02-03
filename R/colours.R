@@ -8,7 +8,7 @@ redbull_colours <- c(
   `light blue` = "#487AE3",
   `light red` = "#F47490",
   `light yellow` = "#FFDC7B",
-  `lightest blue` = "#C2D3F6",
+  `lightest blue` = "#DAE4F9",
   `lightest pink` = "#FBD1DA",
   `lightest yellow` = "#FFE7A7",
   `grey` = "#404040",

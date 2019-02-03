@@ -9,6 +9,6 @@
 bloomberg_colors
 }
 \description{
-Colour palette based on the Bloomberg colour template \link\link{https://www.bloomberg.com/graphics/2018-what-the-midterm-campaign-looks-like-in-your-hometown/}
+Colour palette based on the Bloomberg colour template \url{https://www.bloomberg.com/graphics/2018-what-the-midterm-campaign-looks-like-in-your-hometown/}
 }
 \keyword{datasets}

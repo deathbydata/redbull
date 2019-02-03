@@ -3,12 +3,12 @@
 \docType{data}
 \name{redbull_palettes}
 \alias{redbull_palettes}
-\title{Palette definitions for redbull package}
+\title{Palette definitions for redbull ggplot2 scales}
 \format{An object of class \code{list} of length 7.}
 \usage{
 redbull_palettes
 }
 \description{
-Palette definitions for redbull package
+Palette definitions for redbull ggplot2 scales
 }
 \keyword{datasets}

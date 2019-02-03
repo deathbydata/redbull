@@ -4,7 +4,7 @@
 \name{redbull_colours}
 \alias{redbull_colours}
 \title{Red Bull Colour Palette}
-\format{An object of class \code{character} of length 7.}
+\format{An object of class \code{character} of length 11.}
 \usage{
 redbull_colours
 }

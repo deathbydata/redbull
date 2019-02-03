@@ -3,24 +3,26 @@
 \name{scale_color_redbull}
 \alias{scale_color_redbull}
 \alias{scale_colour_redbull}
-\title{Color scale constructor for drsimonj colors}
+\title{Colour scale constructor for Red Bull colours}
 \usage{
-scale_color_redbull(palette = "redbull", discrete = TRUE,
-  reverse = FALSE, rep = TRUE, ...)
+scale_color_redbull(palette = "redbull", discrete = TRUE, reverse = FALSE,
+  rep = TRUE, ...)
 
 scale_colour_redbull(palette = "redbull", discrete = TRUE,
   reverse = FALSE, rep = TRUE, ...)
 }
 \arguments{
-\item{palette}{Character name of palette in drsimonj_palettes}
+\item{palette}{Character name of Red Bull palette}
 
-\item{discrete}{Boolean indicating whether color aesthetic is discrete or not}
+\item{discrete}{Boolean indicating whether colour aesthetic is discrete or not}
 
 \item{reverse}{Boolean indicating whether the palette should be reversed}
+
+\item{rep}{Boolean indicating whether the whole palette should be repeated (TRUE) or just the final value (FALSE)}
 
 \item{...}{Additional arguments passed to discrete_scale() or
 scale_color_gradientn(), used respectively when discrete is TRUE or FALSE}
 }
 \description{
-Color scale constructor for drsimonj colors
+Colour scale constructor for Red Bull colours
 }
