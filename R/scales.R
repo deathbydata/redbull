@@ -43,6 +43,7 @@ redbull_palette_discrete <- function(palette = "redbull", reverse = FALSE, rep =
 #'
 #' @export
 scale_color_redbull <- function(palette = "redbull", discrete = TRUE, reverse = FALSE, rep = TRUE, ...) {
+  if(! palette %in% names(redbull_palettes)) stop("Invalid palette name", call. = FALSE)
 
   if (discrete) {
     ggplot2::discrete_scale(aesthetics = "colour", scale_name = paste0("redbull_", palette), palette = redbull_palette_discrete(palette, reverse, rep))
@@ -69,6 +70,7 @@ scale_colour_redbull <- scale_color_redbull
 #'
 #' @export
 scale_fill_redbull <- function(palette = "redbull", discrete = TRUE, reverse = FALSE, rep = TRUE, ...) {
+  if(! palette %in% names(redbull_palettes)) stop("Invalid palette name", call. = FALSE)
 
   if (discrete) {
     ggplot2::discrete_scale("fill", scale_name = paste0("redbull_", palette), palette = redbull_palette_discrete(palette, reverse, rep))

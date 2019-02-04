@@ -1,7 +1,7 @@
 Package: redbull
 Type: Package
 Title: ggplot2 Colour Scales for Red Bull Data Science projects
-Version: 0.1.0
+Version: 0.1.1
 Author: Josh Muncke
 Maintainer: Josh Muncke <josh.muncke@redbull.com>
 Description: This package contains colours and pre-built palettes for
