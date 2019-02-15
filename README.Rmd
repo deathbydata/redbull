@@ -45,13 +45,15 @@ theme_set(theme_bw())
 mtcars %>% 
   ggplot(aes(x = wt, y = mpg, colour = as.factor(cyl))) + 
   geom_point(size = 4, alpha = 0.75) + 
-  scale_colour_redbull()
+  scale_colour_redbull() +
+  style_redbull()
 
 # Using fill aesthetic (bars/areas)
 mtcars %>% 
   ggplot(aes(x = as.factor(carb), fill = as.factor(carb))) + 
   geom_bar() + 
-  scale_fill_redbull("rbfull")
+  scale_fill_redbull("rbfull") +
+  style_redbull()
 ```
 
 You can use `discrete = FALSE` if you have continuous values. `reverse = TRUE` will flip the direction of the colours in the palette.
@@ -60,7 +62,11 @@ You can use `discrete = FALSE` if you have continuous values. `reverse = TRUE` w
 mtcars %>% ggplot(aes(x = disp, y = wt, colour = hp)) + 
   geom_point(size = 4.5, colour = "black") +
   geom_point(size = 4) + 
-  scale_color_redbull("rbwarm", discrete = FALSE, reverse = TRUE)
+  scale_color_redbull("rbwarm", discrete = FALSE, reverse = TRUE) +
+  style_redbull() +
+  ggtitle("Relationship between engine weight and displacement") +
+  xlab("Engine displacement (cc)") +
+  ylab("Engine weight (?)")
 ```
 
 For discrete scales you can select the behaviour when there are more levels of your factor than palette colours using the `rep` parameter.
