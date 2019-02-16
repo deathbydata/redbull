@@ -34,6 +34,11 @@ Usage is through the functions `scale_fill_redbull` and `scale_colour_redbull` d
 
 ``` r
 library(ggplot2)
+```
+
+    ## Warning: package 'ggplot2' was built under R version 3.5.2
+
+``` r
 library(redbull)
 library(magrittr)
 
@@ -61,10 +66,15 @@ mtcars %>%
 You can use `discrete = FALSE` if you have continuous values. `reverse = TRUE` will flip the direction of the colours in the palette.
 
 ``` r
-mtcars %>% ggplot(aes(x = disp, y = wt, colour = hp)) + 
+mtcars %>% 
+  ggplot(aes(x = disp, y = wt, colour = hp)) + 
   geom_point(size = 4.5, colour = "black") +
   geom_point(size = 4) + 
-  scale_color_redbull("rbwarm", discrete = FALSE, reverse = TRUE)
+  scale_color_redbull("rbwarm", discrete = FALSE, reverse = TRUE) +
+  ggtitle("Relationship between engine weight and displacement",
+          "Colour shows engine horsepower") +
+  xlab("Engine displacement (cc)") +
+  ylab("Engine weight (?)")
 ```
 
 ![](README_files/figure-markdown_github/discrete%20and%20reverse-1.png)
