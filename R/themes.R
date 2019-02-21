@@ -28,7 +28,7 @@ theme_rb <- function(base_size = 11, base_family = "Helvetica", base_line_size =
                             colour = "black", size = base_size, lineheight = 0.9,
                             hjust = 0.5, vjust = 0.5, angle = 0, margin = margin(),
                             debug = FALSE),
-        #axis.line = element_blank(),
+        axis.line = element_line(color="#222222", size = 0.75),
         axis.line.x = element_line(color="#222222", size = 0.75),
         axis.line.y = element_line(color="#222222", size = 0.75),
         axis.text = element_text(size = rel(0.7), colour = "grey30", family = base_family),
