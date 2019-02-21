@@ -37,8 +37,6 @@ library(ggplot2)
 library(redbull)
 library(magrittr)
 
-theme_set(theme_bw())
-
 # Using colour aesthetic (points/lines)
 mtcars %>% 
   ggplot(aes(x = wt, y = mpg, colour = as.factor(cyl))) + 
@@ -61,10 +59,15 @@ mtcars %>%
 You can use `discrete = FALSE` if you have continuous values. `reverse = TRUE` will flip the direction of the colours in the palette.
 
 ``` r
-mtcars %>% ggplot(aes(x = disp, y = wt, colour = hp)) + 
+mtcars %>% 
+  ggplot(aes(x = disp, y = wt, colour = hp)) + 
   geom_point(size = 4.5, colour = "black") +
   geom_point(size = 4) + 
-  scale_color_redbull("rbwarm", discrete = FALSE, reverse = TRUE)
+  scale_color_redbull("rbwarm", discrete = FALSE, reverse = TRUE) +
+  ggtitle("Relationship between engine weight and displacement",
+          "Colour shows engine horsepower") +
+  xlab("Engine displacement (cc)") +
+  ylab("Engine weight (?)")
 ```
 
 ![](README_files/figure-markdown_github/discrete%20and%20reverse-1.png)
@@ -88,3 +91,29 @@ mtcars %>%
 ```
 
 ![](README_files/figure-markdown_github/rep%20parameter-2.png)
+
+`theme_rb`
+----------
+
+The `redbull` package also contains a full `ggplot2` theme which you can apply using `theme_rb()`. To use this as the default theme for all charts in your script or notebook use `theme_set(theme_rb())`.
+
+``` r
+theme_set(theme_rb())
+```
+
+    ## Warning: New theme missing the following elements: axis.line
+
+``` r
+mtcars %>% 
+  ggplot(aes(x = disp, y = wt, colour = hp)) + 
+  geom_point(size = 4.5, colour = "black") +
+  geom_point(size = 4) + 
+  scale_color_redbull("rbwarm", discrete = FALSE, reverse = TRUE) +
+  labs(title = "Relationship between engine weight and displacement",
+       subtitle = "Colour shows engine horsepower",
+       caption = "Source: R mtcars dataset") +
+  xlab("Engine displacement (cc)") +
+  ylab("Engine weight (?)")
+```
+
+![](README_files/figure-markdown_github/theme_rb-1.png)

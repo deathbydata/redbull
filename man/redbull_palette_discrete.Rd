@@ -4,8 +4,8 @@
 \alias{redbull_palette_discrete}
 \title{Returns a function which provides a discrete redbull colour palette}
 \usage{
-redbull_palette_discrete(palette = "redbull", reverse = FALSE, rep = TRUE,
-  ...)
+redbull_palette_discrete(palette = "redbull", reverse = FALSE,
+  rep = TRUE, ...)
 }
 \arguments{
 \item{palette}{Character name of palette from redbull_palettes}

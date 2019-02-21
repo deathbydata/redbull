@@ -3,3 +3,4 @@
 export(scale_color_redbull)
 export(scale_colour_redbull)
 export(scale_fill_redbull)
+export(theme_rb)
