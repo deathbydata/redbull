@@ -99,11 +99,7 @@ The `redbull` package also contains a full `ggplot2` theme which you can apply u
 
 ``` r
 theme_set(theme_rb())
-```
 
-    ## Warning: New theme missing the following elements: axis.line
-
-``` r
 mtcars %>% 
   ggplot(aes(x = disp, y = wt, colour = hp)) + 
   geom_point(size = 4.5, colour = "black") +
