@@ -4,8 +4,8 @@
 \alias{scale_fill_redbull}
 \title{Colour scale constructor for Red Bull colours}
 \usage{
-scale_fill_redbull(palette = "redbull", discrete = TRUE, reverse = FALSE,
-  rep = TRUE, ...)
+scale_fill_redbull(palette = "redbull", discrete = TRUE,
+  reverse = FALSE, rep = TRUE, ...)
 }
 \arguments{
 \item{palette}{Character name of Red Bull palette}

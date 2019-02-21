@@ -5,8 +5,8 @@
 \alias{scale_colour_redbull}
 \title{Colour scale constructor for Red Bull colours}
 \usage{
-scale_color_redbull(palette = "redbull", discrete = TRUE, reverse = FALSE,
-  rep = TRUE, ...)
+scale_color_redbull(palette = "redbull", discrete = TRUE,
+  reverse = FALSE, rep = TRUE, ...)
 
 scale_colour_redbull(palette = "redbull", discrete = TRUE,
   reverse = FALSE, rep = TRUE, ...)
