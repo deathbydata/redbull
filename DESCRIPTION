@@ -15,3 +15,8 @@ Suggests:
     testthat,
     ggplot2,
     magrittr
+Imports: 
+    config,
+    DBI,
+    odbc,
+    dbplyr

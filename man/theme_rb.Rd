@@ -4,7 +4,7 @@
 \alias{theme_rb}
 \title{Add redbull theme to ggplot chart}
 \usage{
-theme_rb(base_size = 11, base_family = "",
+theme_rb(base_size = 11, base_family = "Helvetica",
   base_line_size = base_size/22, base_rect_size = base_size/22)
 }
 \description{
